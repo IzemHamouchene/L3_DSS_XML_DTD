@@ -7,10 +7,10 @@ Edit all XML files stat start with _1_ to follow the DTDs illustrated in the fol
 
 | DTD rules | XML file
 | --- | --- |
-| <!DOCTYPE INVENTAIRE [
+| <!DOCTYPE INVENTAIRE [ | 1_input_1.xml |
 <!ELEMENT INVENTAIRE (TITRE)>
 <!ELEMENT TITRE (#PCDATA | SOUSTITRE)*>
-<!ELEMENT SOUSTITRE (#PCDATA)> ]> | 1_input_1.xml |
+<!ELEMENT SOUSTITRE (#PCDATA)> ]> 
 
 | <!DOCTYPE INVENTAIRE [
 <!ELEMENT INVENTAIRE (TITRE)*>
