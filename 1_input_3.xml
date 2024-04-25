@@ -2,7 +2,7 @@
 <!DOCTYPE INVENTAIRE SYSTEM "assets/1_rules_3.dtd">
 <INVENTAIRE>
     <TITRE>
-    Some PCDATA content
+    Some PCDATA content , 
     <SOUSTITRE>Subtitle content</SOUSTITRE>
     </TITRE>
 </INVENTAIRE>
