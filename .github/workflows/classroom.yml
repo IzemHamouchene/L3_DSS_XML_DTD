@@ -15,6 +15,6 @@
 
           # start tests
             - name: Run autograding tests
-              uses: education/autograding@v1
-              id: autograder
+              run: python validator.py
+              id: autograderID
               continue-on-error: false
