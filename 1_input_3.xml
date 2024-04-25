@@ -1,1 +1,6 @@
-
+<?xml version="1.0"?>
+<!DOCTYPE root SYSTEM "assets/1_rules_3.dtd">
+<root>
+    <element1>Value1</element1>
+    <element2>Value2</element2>
+</root>
