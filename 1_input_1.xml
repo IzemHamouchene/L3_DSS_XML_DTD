@@ -3,6 +3,8 @@
 <INVENTAIRE>
     <TITRE>
         Thorgal
-        <SOUSTITRE>Et la chambre des secrets</SOUSTITRE>
+        <SOUSTITRE>
+            <SOUSTITRE>Et la chambre des secrets</SOUSTITRE>
+        </SOUSTITRE>
     </TITRE>
 </INVENTAIRE>
