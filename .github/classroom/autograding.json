@@ -1,6 +1,14 @@
 {
-      "name": "Test 1",
-      "description": "Description of test 1",
-      "points": 10,
-      "command": "python validator.py input.xml rules.dtd"
+  "tests": [
+    {
+      "name": "Exercice 1 : Start Script create_Database.sql",
+      "setup": "",
+      "run": "python validator.py input.xml rules.dtd",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
     }
+  ]
+}
