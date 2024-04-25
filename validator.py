@@ -1,5 +1,6 @@
 import os
 import sys
+import io
 from lxml import etree
 
 def validate_xml_with_dtd(xml_file, dtd_file):
