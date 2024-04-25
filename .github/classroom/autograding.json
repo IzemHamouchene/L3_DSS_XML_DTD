@@ -1,14 +1,11 @@
 {
-  "assignment_name": "XML DTD Validator",
-  "description": "Validate XML files against a DTD using a Python script.",
-  "test_cases": [
+  "tests": [
     {
       "name": "Validation Test",
       "input_files": ["input.xml", "input.dtd"],
       "output_files": ["output.txt"],
       "points": 10,
-      "commands": ["python validator.py input.xml input.dtd > output.txt"]
+      "commands": ["python validator.py]
     }
-  ],
-  "timeout": 30
+  ]
 }
