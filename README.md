@@ -8,6 +8,8 @@ Edit all XML files stat start with _1_ to follow the DTDs illustrated in the fol
 | DTD rules | XML file |
 | --- | --- |
 | `<!DOCTYPE INVENTAIRE [` <br/> `<!ELEMENT INVENTAIRE (TITRE)>` <br/> `<!ELEMENT TITRE (#PCDATA \| SOUSTITRE)*>` <br/> `<!ELEMENT SOUSTITRE (#PCDATA)> ]>` | [1_input_1.xml](1_input_1.xml) |
+| `<!DOCTYPE INVENTAIRE [` <br/> `<!ELEMENT INVENTAIRE (TITRE)*>` <br/> `<!ELEMENT TITRE (#PCDATA \| SOUSTITRE)>` <br/> `<!ELEMENT SOUSTITRE (#PCDATA)> ]>` | [1_input_2.xml](1_input_2.xml) |
+| `<!DOCTYPE INVENTAIRE [` <br/> `<!ELEMENT INVENTAIRE (TITRE)>` <br/> `<!ELEMENT TITRE (#PCDATA, SOUSTITRE)*>` <br/> `<!ELEMENT SOUSTITRE (#PCDATA)> ]>` | [1_input_3.xml](1_input_3.xml) |
 
 
 
