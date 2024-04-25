@@ -11,12 +11,6 @@ def validate_xml_with_dtd(xml_file, dtd_file):
         
         with open(dtd_file, 'rb') as f:
             dtd_content = f.read()
-
-
-        parser = etree.XMLParser(dtd_validation=True)
-        tree = etree.parse(xml_file, parser)
-        print("tree")
-        print(tree)
         
         dtd = etree.DTD(file=io.BytesIO(dtd_content))
         parser = etree.XMLParser(dtd_validation=True)
