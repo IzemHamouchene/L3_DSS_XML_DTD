@@ -5,6 +5,7 @@ from lxml import etree
 
 def validate_xml_with_dtd(xml_file, dtd_file):
     try:
+         print("read File")
         with open(xml_file, 'rb') as f:
             xml_content = f.read()
         
@@ -46,6 +47,6 @@ if __name__ == "__main__":
     if not os.path.exists(dtd_file):
         print("DTD file not found")
         sys.exit(1)
-    
+    print("call fct")
     if not validate_xml_with_dtd(xml_file, dtd_file):
         sys.exit(1)
