@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <!DOCTYPE root SYSTEM "assets/1_rules_1.dtd">
-<INVENTAIRE>
+<root>
     <TITRE>
         Thorgal
         <SOUSTITRE>Et la chambre des secrets</SOUSTITRE>
     </TITRE>
-</INVENTAIRE>
+</root>
