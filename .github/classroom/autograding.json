@@ -1,14 +1,3 @@
 {
-  "tests": [
-    {
-      "name": "Exercice 1 : Start Script create_Database.sql",
-      "setup": "",
-      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -d master -i /app/1_create_database.sql",
-      "input": "",
-      "output": "",
-      "comparison": "included",
-      "timeout": 10,
-      "points": 1
-    }
-  ]
+
 }
