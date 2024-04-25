@@ -1,9 +1,29 @@
 {
   "tests": [
     {
-      "name": "Exercice 1 : Validate XML File 1",
+      "name": "Exercice 1 : Input1.xml",
       "setup": "",
       "run": "python assets/validator.py 1_input_1.xml assets/1_rules_1.dtd",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Exercice 1 : Input2.xml",
+      "setup": "",
+      "run": "python assets/validator.py 1_input_2.xml assets/1_rules_2.dtd",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Exercice 1 : Input3.xml",
+      "setup": "",
+      "run": "python assets/validator.py 1_input_3.xml assets/1_rules_3.dtd",
       "input": "",
       "output": "",
       "comparison": "included",
