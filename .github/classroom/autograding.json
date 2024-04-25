@@ -3,7 +3,7 @@
     {
       "name": "Exercice 1 : Validate XML File 1",
       "setup": "",
-      "run": "python validator.py input.xml rules.dtd",
+      "run": "python assets/validator.py 1_input_1.xml assets/1_rules_1.dtd",
       "input": "",
       "output": "",
       "comparison": "included",
