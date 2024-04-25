@@ -1,0 +1,26 @@
+    name: Hamouchene Classroom Workflow
+
+    on: 
+      push:
+        branches:
+        - '*'
+        
+    jobs:
+      build:
+        name: Autograding
+        runs-on: ubuntu-latest
+        steps:
+            - name: Setup SQL Server instance
+              run: docker pull mcr.microsoft.com/mssql/server:2019-latest
+
+            - name: Setup Docker
+              run: docker run -v $(pwd):/app -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pa$$w0rd1234' -p 1433:1433 --name sql2017 -d mcr.microsoft.com/mssql/server:2019-latest
+
+            - name: Checkout code
+              uses: actions/checkout@v2
+
+          # start tests
+            - name: Run autograding tests
+              uses: education/autograding@v1
+              id: autograder
+              continue-on-error: false

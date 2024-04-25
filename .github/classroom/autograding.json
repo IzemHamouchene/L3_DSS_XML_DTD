@@ -1,0 +1,156 @@
+{
+  "tests": [
+    {
+      "name": "Exercice 1 : Start Script create_Database.sql",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -d master -i /app/1_create_database.sql",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+
+    
+    {
+      "name": "Check existing database : UniversityDB",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"SELECT NAME FROM sys.sysdatabases\"",
+      "input": "",
+      "output": "UniversityDB",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+
+    
+    {
+      "name": "Check existing table : teacher",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"SELECT TABLE_NAME FROM UniversityDB.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND  TABLE_NAME = 'teacher'\"",
+      "input": "",
+      "output": "teacher",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check existing table : student",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"SELECT TABLE_NAME FROM UniversityDB.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND  TABLE_NAME = 'student'\"",
+      "input": "",
+      "output": "student",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check existing table : Cours",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"SELECT TABLE_NAME FROM UniversityDB.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND  TABLE_NAME = 'Cours'\"",
+      "input": "",
+      "output": "Cours",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check existing table : CoursTeacher",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"SELECT TABLE_NAME FROM UniversityDB.INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE' AND  TABLE_NAME = 'CoursTeacher'\"",
+      "input": "",
+      "output": "CoursTeacher",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+
+
+    {
+      "name": "Check teacher.ID type INT",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"USE UniversityDB SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'teacher' AND COLUMN_NAME = 'ID'\"",
+      "input": "",
+      "output": "int",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check teacher.FirstName type NVARCHAR",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"USE UniversityDB SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'teacher' AND COLUMN_NAME = 'FirstName'\"",
+      "input": "",
+      "output": "nvarchar",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check teacher.LastName type NVARCHAR",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"USE UniversityDB SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'teacher' AND COLUMN_NAME = 'LastName'\"",
+      "input": "",
+      "output": "nvarchar",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+
+
+
+
+
+    {
+      "name": "Exercice 2 : Start Script insert_data.sql",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -d master -i /app/2_insert_data.sql",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check if the teacher 'sofian,family1' has been inserted",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"USE UniversityDB SELECT LastName FROM teacher WHERE ID = 1\"",
+      "input": "",
+      "output": "family1",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check if the student 'mohamed,family1' has been inserted",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"USE UniversityDB SELECT FirstName FROM student WHERE ID = 1\"",
+      "input": "",
+      "output": "mohamed",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Check if the cours 'BDDA' has been inserted",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"USE UniversityDB SELECT Name FROM cours WHERE ID = 2\"",
+      "input": "",
+      "output": "BDDA",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+    ,
+    {
+      "name": "Check if the coursTeacher '2,1,Thursday,9' has been inserted",
+      "setup": "",
+      "run": "docker exec sql2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Pa\\$\\$w0rd1234 -Q \"USE UniversityDB SELECT DayWeek FROM coursTeacher WHERE IdCoursTeacher = 3\"",
+      "input": "",
+      "output": "Thursday",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
