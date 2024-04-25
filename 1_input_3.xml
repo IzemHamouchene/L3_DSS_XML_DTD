@@ -2,6 +2,7 @@
 <!DOCTYPE INVENTAIRE SYSTEM "assets/1_rules_3.dtd">
 <INVENTAIRE>
     <TITRE>
+        TEXT test
         <SOUSTITRE>Et la chambre des secrets</SOUSTITRE>
     </TITRE>
 </INVENTAIRE>
