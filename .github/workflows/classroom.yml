@@ -23,7 +23,12 @@
             uses: actions/checkout@v2
 
           # start tests
+          #- name: Run autograding tests
+          #  run: python validator.py
+          #  id: autograderID
+          #  continue-on-error: false
+          # start tests
           - name: Run autograding tests
-            run: python validator.py
-            id: autograderID
-            continue-on-error: false
+            uses: education/autograding@v1
+            id: autograder
+            continue-on-error: false        
