@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "Validation Test",
-      "run": ["python validator.py]
+      "run": "python validator.py"
       "input": "",
       "output": "",
       "comparison": "included",
