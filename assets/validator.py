@@ -5,7 +5,7 @@ from lxml import etree
 
 def validate_xml_with_dtd(xml_file, dtd_file):
     try:
-         print("read File")
+        print("read File")
         with open(xml_file, 'rb') as f:
             xml_content = f.read()
         
