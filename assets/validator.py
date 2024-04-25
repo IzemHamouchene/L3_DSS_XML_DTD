@@ -26,11 +26,19 @@ def validate_xml_with_dtd(xml_file, dtd_file):
         return False
 
 if __name__ == "__main__":
-    xml_file = 'input.xml'
-    dtd_file = 'rules.dtd'
+    if len(sys.argv) != 3:
+        print("Usage: python validator.py <xml_file> <dtd_file>")
+        sys.exit(1)
     
-    if not os.path.exists(xml_file) or not os.path.exists(dtd_file):
-        print("XML file or DTD file not found")
+    xml_file = sys.argv[1]
+    dtd_file = sys.argv[2]
+
+    if not os.path.exists(xml_file)
+        print("XML file not found")
+        sys.exit(1)
+
+    if not os.path.exists(dtd_file):
+        print("DTD file not found")
         sys.exit(1)
     
     if not validate_xml_with_dtd(xml_file, dtd_file):
