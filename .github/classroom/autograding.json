@@ -1,7 +1,7 @@
 {
   "tests": [
     {
-      "name": "Exercice 1 : Start Script create_Database.sql",
+      "name": "Exercice 1 : Validate XML File 1",
       "setup": "",
       "run": "python validator.py input.xml rules.dtd",
       "input": "",
