@@ -2,10 +2,12 @@
   "tests": [
     {
       "name": "Validation Test",
-      "input_files": ["input.xml", "input.dtd"],
-      "output_files": ["output.txt"],
-      "points": 10,
-      "commands": ["python validator.py]
+      "run": ["python validator.py]
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
     }
   ]
 }
