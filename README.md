@@ -7,7 +7,7 @@ Edit all XML files stat start with _1_ to follow the DTDs illustrated in the fol
 
 | DTD rules | XML file |
 | --- | --- |
-| `<!DOCTYPE INVENTAIRE [` <br/> sqd | [1_input_1.xml](link_to_xml_file) |
+| `<!DOCTYPE INVENTAIRE [` <br/> `<!ELEMENT INVENTAIRE (TITRE)>` | [1_input_1.xml](link_to_xml_file) |
 
 
      
