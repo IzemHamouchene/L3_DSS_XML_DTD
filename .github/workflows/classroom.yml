@@ -6,27 +6,25 @@
         - '*'
         
     jobs:
-      build:
-        name: Autograding
-        runs-on: ubuntu-latest
-        steps:
-
-          - name: Set up Python
-            uses: actions/setup-python@v3
-            with:
-              python-version: '3.10'  # Specify the Python version you need
-
-          - name: Install dependencies
-            run: |
-                python -m pip install --upgrade pip
-                #run: pip install --upgrade pip
-                pip install lxml
-
-          - name: Checkout code
-            uses: actions/checkout@v2
-
-          # start tests
-          #- name: Run autograding tests
-          #  run: python validator.py
-          #  id: autograderID
-          #  continue-on-error: false    
+     build:
+      name: Autograding
+      runs-on: ubuntu-latest
+      steps:
+        - name: Set up Python
+          uses: actions/setup-python@v3
+          with:
+            python-version: '3.10'  # Specify the Python version you need
+    
+        - name: Install dependencies
+          run: |
+            #python -m pip install --upgrade pip
+            pip install --upgrade pip
+            pip install lxml
+    
+        - name: Checkout code
+          uses: actions/checkout@v4
+    
+        - name: Run autograding tests
+          uses: education/autograding@v1
+          id: autograder1
+          continue-on-error: false
