@@ -33,7 +33,7 @@ if __name__ == "__main__":
     xml_file = sys.argv[1]
     dtd_file = sys.argv[2]
 
-    if not os.path.exists(xml_file)
+    if not os.path.exists(xml_file):
         print("XML file not found")
         sys.exit(1)
 
