@@ -2,7 +2,6 @@
 <!DOCTYPE INVENTAIRE SYSTEM "assets/1_rules_3.dtd">
 <INVENTAIRE>
     <TITRE>
-    <![CDATA[<test>content!</test>]]>
     <SOUSTITRE>Subtitle content</SOUSTITRE>
     </TITRE>
 </INVENTAIRE>
