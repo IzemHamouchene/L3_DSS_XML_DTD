@@ -5,12 +5,13 @@ from lxml import etree
 
 def validate_xml_with_dtd(xml_file, dtd_file):
     try:
-        print("read File")
+        print("read File xml")
         with open(xml_file, 'rb') as f:
             xml_content = f.read()
-        
+        print("read File dtd")
         with open(dtd_file, 'rb') as f:
             dtd_content = f.read()
+        print("read File dtd file")
         
         dtd = etree.DTD(file=io.BytesIO(dtd_content))
         print(dtd)
