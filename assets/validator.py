@@ -13,9 +13,11 @@ def validate_xml_with_dtd(xml_file, dtd_file):
             dtd_content = f.read()
         
         dtd = etree.DTD(file=io.BytesIO(dtd_content))
+        print(dtd)
         parser = etree.XMLParser(dtd_validation=True)
+        print(parser)
         etree.fromstring(xml_content, parser)
-        
+        print(etree.fromstring(xml_content))
         if dtd.validate(etree.fromstring(xml_content)):
             print("Validation successful")
             return True
